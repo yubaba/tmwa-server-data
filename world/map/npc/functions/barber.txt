@@ -68,7 +68,7 @@ L_RandomStyle:
     goto L_Done;
 
 L_SameStyle:
-    mes "Your hair already has that style";
+    mes "Your hair already has that style.";
     goto L_Main;
 
 L_Color:
@@ -100,7 +100,7 @@ L_RandomColor:
     goto L_Done;
 
 L_SameColor:
-    mes "Your hair is already that color";
+    mes "Your hair is already that color.";
     goto L_Main;
 
 L_Done:
