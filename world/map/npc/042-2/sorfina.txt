@@ -4,7 +4,7 @@
 042-2.gat,28,26,0|script|Sorfina|154,4,4{
 
     if (FLAGS & FLAG_TUTORIAL_DONE) goto L_Again;
-    if (sorfina == 4) goto L_Again;
+    if (sorfina == 4) goto L_Heal;
     if (sorfina == 3) goto L_Clothes;
     if (sorfina == 2) goto L_Chest;
     if (sorfina == 1) goto L_Carpet;
@@ -95,6 +95,16 @@ L_Clothes:
     set sorfina, 4;
     goto L_Close;
 
+L_Heal:
+    if (Hp == MaxHp)
+        goto L_Again;
+    mes "[Sorfina]";
+    mes "\"Hello Dear! You look tired, you should rest a moment.\"";
+    mes "You take a short nap and feel refreshed.";
+    heal MaxHp, 0;
+    next;
+    goto L_Again;
+
 L_Again:
     mes "[Sorfina]";
     mes "\"Make yourself at home! Do you have any questions?\"";
@@ -176,7 +186,7 @@ L_Aidan:
     mes "\"When you leave this area to the Southeast, you'll come to the docks.";
     mes "Follow the street to the south to pass the old town gates.\"";
     next;
-    mes "\"Turn west at the next intersection. You'll pass by the gates of Tulimshar's famos magic school there.";
+    mes "\"Turn west at the next intersection. You'll pass by the gates of Tulimshar's famous magic school there.";
     mes "Just follow the street to the south and you'll reach the bazaar.\"";
     next;
     mes "\"I heard Aidan is looking for brave adventurers, you might want to talk to him.";
@@ -296,7 +306,7 @@ OnTouch:
     if ((sorfina < 4)
         && !(FLAGS & FLAG_TUTORIAL_DONE))
             goto L_Block;
-    warp "042-1.gat", 37, 57;
+    warp "042-1.gat", 63, 77;
     end;
 
 L_Block:
