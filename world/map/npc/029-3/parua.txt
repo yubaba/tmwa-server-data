@@ -45,7 +45,7 @@ L_CallPlayers:
         "We are OK. Just do it!", L_Paying,
         "I will accept your help.", -;
     mes "[Parua]";
-    mes "\"OK, I can make up to 3 announcements to the people of this world, letting them know that you are about to challenge the powers that sleep in this cave! If you want the fight to start in 5 minutes, I will make one announcement, if it is 15 minutes, I will make 2 announcements, and if it is to start in 30 minutes, it will be 3 announcements.\"";
+    mes "\"OK, I can make up to 3 announcements to the people of this world, letting them know that you are about to challenge the powers that sleep in this cave! If you want the fight to start in 5 minutes, I will make one announcement, if it is 10 minutes, I will make 2 announcements, and if it is to start in 15 minutes, it will be 3 announcements.\"";
     next;
     mes "\"But be careful! If there aren't at least five people here at the time of the fight, your money will be lost.\"";
     next;
